@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+h1 { text-align: center; margin-bottom: 20px;}
+h2 { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+h3 { margin-bottom: 5px; font-size: 1.1em;}
+
+
+.color-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 20px; /* Add gap between foreground and background input groups */
+}
+
+.color-input-group {
+    display: flex;
+    flex-direction: column; /* Stack label, picker, and hex input vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 8px; /* Space between label, picker, and hex input */
+}
+
+.color-input-group label {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.color-input-group input[type="color"] {
+    width: 100px; /* Or a fixed width you prefer */
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0; /* Remove padding for color pickers */
+    cursor: pointer;
+}
+
+.color-input-group input[type="text"] {
+    width: 90px; /* Adjust to align with color picker if needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+
+.results {
+    margin-bottom: 20px;
+}
+
+.wcag-levels {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.level-group {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.level-group p {
+    margin: 5px 0;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.pass {
+    color: green;
+}
+
+.status.fail {
+    color: red;
+}
+
+.preview-area {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.preview-area h2 {
+    background-color: #eee;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.preview-content {
+    padding: 20px;
+    min-height: 100px;
+    font-size: 16px; /* Corresponds to "normal text" roughly */
+    line-height: 1.5;
+}
+
+.preview-content .large-text {
+    font-size: 24px; /* Corresponds to ~18pt, definitely "large text" */
+    /* Alternatively, use 18.66px for 14pt bold, or 24px for 18pt */
+}

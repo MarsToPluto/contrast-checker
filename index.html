@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Contrast Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WCAG Contrast Checker</h1>
+
+        <div class="color-inputs">
+            <div class="color-input-group">
+                <label for="fgColor">Foreground Color:</label>
+                <input type="color" id="fgColorPicker" value="#000000">
+                <input type="text" id="fgColorHex" value="#000000" maxlength="7">
+            </div>
+            <div class="color-input-group">
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColorPicker" value="#FFFFFF">
+                <input type="text" id="bgColorHex" value="#FFFFFF" maxlength="7">
+            </div>
+        </div>
+
+        <div class="results">
+            <h2>Contrast Ratio: <span id="contrastRatioValue">--:1</span></h2>
+            <div class="wcag-levels">
+                <div class="level-group">
+                    <h3>AA Level</h3>
+                    <p>Normal Text (4.5:1): <span id="aaNormal" class="status">--</span></p>
+                    <p>Large Text (3:1): <span id="aaLarge" class="status">--</span></p>
+                </div>
+                <div class="level-group">
+                    <h3>AAA Level</h3>
+                    <p>Normal Text (7:1): <span id="aaaNormal" class="status">--</span></p>
+                    <p>Large Text (4.5:1): <span id="aaaLarge" class="status">--</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-area">
+            <h2>Preview</h2>
+            <div id="previewText" class="preview-content">
+                <p>This is normal example text.</p>
+                <p class="large-text">This is large example text.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
